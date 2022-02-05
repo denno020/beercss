@@ -2201,6 +2201,7 @@ div
           nav
             button(data-ui="#modal") Modal
             button(data-ui="#modal-calendar") Calendar
+            button(data-ui="#modal-long") Long Modal
         #navs.col.s12
           .large-space
           h4.middle-align
@@ -3694,6 +3695,53 @@ div
           button.square.round.flat(data-ui="#modal")
             i close
 
+      #modal-long.modal
+        nav
+            button.border.square.round(@click="updateModal('modal active')")
+              i zoom_in_map
+            button.border.square.round(@click="updateModal('modal left active')")
+              i arrow_backward
+            button.border.square.round(@click="updateModal('modal right active')")
+              i arrow_forward
+            button.border.square.round(@click="updateModal('modal top active')")
+              i arrow_upward
+            button.border.square.round(@click="updateModal('modal bottom active')")
+              i arrow_downward
+            button.square.round.flat(data-ui="#modal-long")
+              i close
+        h3 Long Form Content
+        p The Reinheitsgebot (German pronunciation: [&#x2C8;&#x281;a&#x26A;nha&#x26A;ts&#x261;&#x259;bo&#x2D0;t] (audio speaker iconlisten), literally &quot;purity order&quot;) is a series of regulations limiting the ingredients in beer in Germany and the states of the former Holy Roman Empire. The best known version of the law was adopted in Bavaria in 1516 (by William IV), but similar regulations predate the Bavarian order, and modern regulations also significantly differ from the 1516 Bavarian version. Although today, the Reinheitsgebot is mentioned in various texts about the history of beer, historically it was only applied in the duchy of Bavaria and from 1906 in Germany as a whole, and it had little or no impact in other countries or regions.
+        h4 1516 Bavarian law
+        p The most influential predecessor of the modern Reinheitsgebot was a law first adopted in the duchy of Munich in 1487. After Bavaria was reunited, the Munich law was adopted across the entirety of Bavaria on 23 April 1516.[1] As Germany unified, Bavaria pushed for adoption of this law on a national basis (see Broader adoption).
+        h5 Ingredients permitted
+        p According to the 1516 Bavarian law, the only ingredients that could be used in the production of beer were water, barley and hops.[2] The text does not mention yeast as an ingredient, although yeast was at the time knowingly used in the brewing process. It is likely that brewers of the time preferred to see yeast as a fixture of the brewing process. Yeast produced in one batch was commonly transferred to a subsequent batch, thus giving yeast a more permanent character in the brewing process. A full understanding of chemical basis of yeast and the fermentation process did not come until much later.
+        h5 Other regulations
+        p The 1516 Bavarian law set the price of beer (depending on the time of year and type of beer), limited the profits made by innkeepers, and made confiscation the penalty for making impure beer.
+        h5 Text
+        p The text (translated) of the 1516 Bavarian law is as follows:
+        blockquote
+          | We hereby proclaim and decree, by Authority of our Province, that henceforth in the Duchy of Bavaria, in the country as well as in the cities and marketplaces, the following rules apply to the sale of beer:
+          | From Michaelmas to Georgi, the price for one Mass [1,069ml] or one Kopf [bowl-shaped container for fluids, not quite one Mass], is not to exceed one Pfennig Munich value, and
+          | From Georgi to Michaelmas, the Mass shall not be sold for more than two Pfennig of the same value, the Kopf not more than three Heller [Heller usually equals one-half Pfennig].
+          | If this not be adhered to, the punishment stated below shall be administered.
+          | Should any person brew, or otherwise have, other beer than March beer, it is not to be sold any higher than one Pfennig per Mass.
+          | Furthermore, we wish to emphasize that in future in all cities, market-towns and in the country, the only ingredients used for the brewing of beer must be Barley, Hops and Water. Whosoever knowingly disregards or transgresses upon this ordinance, shall be punished by the Court authorities&apos; confiscating such barrels of beer, without fail.
+          | Should, however, an innkeeper in the country, city or market-towns buy two or three pails of beer (containing 60 Mass) and sell it again to the common peasantry, he alone shall be permitted to charge one Heller more for the Mass or the Kopf, than mentioned above. Furthermore, should there arise a scarcity and subsequent price increase of the barley (also considering that the times of harvest differ, due to location), WE, the Bavarian Duchy, shall have the right to order curtailments for the good of all concerned.
+          | &mdash;&thinsp;Bavarian Reinheitsgebot of 1516 (emphasis added), Eden, Karl J. (1993). &quot;History of German Brewing&quot;. Zymurgy. 16 (4).
+        h4 Purpose, significance, and impact
+        h5 Purpose
+        p
+          | The Bavarian order of 1516 was introduced in part to prevent price competition with bakers for wheat and rye. The restriction of grains to barley was meant to ensure the availability of affordable bread, as wheat and rye were reserved for use by bakers.[3] The rule may have also had a protectionist role, as beers from Northern Germany often contained additives that could not be grown in Bavaria.[4]
+          | Religious conservatism may have also played a role in adoption of the rule in Bavaria, to suppress the use of plants that were allegedly used in pagan rituals, such as gruit, henbane, belladonna, or wormwood.[5][6]:&hairsp;410&ndash;411&hairsp; The rule also excluded problematic methods of preserving beer, such as soot, stinging nettle and henbane.[7]
+        h4 Significance and continuity
+        p
+          | While some sources refer to the Bavarian law of 1516 as the first law regulating food safety,[1] this is inaccurate, as earlier food safety regulations can be traced back as far as ancient Rome.[8] Similarly, some sources claim that the law has been essentially unchanged since its adoption, but as early as the mid-1500s Bavaria began to allow ingredients such as coriander, bay leaf, and wheat.[9][10] Yeast was also added to modern versions of the law after the discovery of its role in fermentation.
+          | The Reinheitsgebot remains the most famous law that regulates the brewing of beer,[11] and continues to influence brewing not only in Germany, but around the world.[12]
+        h4 Impact on beer diversity in Germany
+        p
+          | Modern versions of the law have contained significant exceptions for different types of beer (such as top-fermented beers), for export beers, and for different regions. The basic law now declares that only malted grains, hops, water and yeast are permitted.[13]
+          | In response to the growth of craft breweries globally, some commentators,[6]:&hairsp;122&hairsp;[14] German brewers,[15] and even German politicians[16] have argued that the Reinheitsgebot has slowed Germany&apos;s adoption of beer trends popular in the rest of the world, such as Belgian lambics and American craft styles. In late 2015, Bavarian brewers voted in favor of a revision to the beer laws to allow other natural ingredients
+
       #modal-samples.modal.right.large
         header.fixed
           a(data-ui="#modal-samples")
@@ -4032,7 +4080,7 @@ export default {
       $("#begin").attr("class", css);
     },
     updateModal(css) {
-      $("#modal").attr("class", css);
+      $(".modal.active").attr("class", css);
     },
     formatHtml(element) {
       function process(str) {

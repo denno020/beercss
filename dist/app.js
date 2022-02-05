@@ -9889,7 +9889,7 @@ var _default = {
       $("#begin").attr("class", css);
     },
     updateModal: function updateModal(css) {
-      $("#modal").attr("class", css);
+      $(".modal.active").attr("class", css);
     },
     formatHtml: function formatHtml(element) {
       function process(str) {
@@ -14120,12 +14120,131 @@ exports.default = _default;
             _vm._m(243),
           ]),
         ]),
+        _c("div", { staticClass: "modal", attrs: { id: "modal-long" } }, [
+          _c("nav", [
+            _c(
+              "button",
+              {
+                staticClass: "border square round",
+                on: {
+                  click: function ($event) {
+                    return _vm.updateModal("modal active")
+                  },
+                },
+              },
+              [_c("i", [_vm._v("zoom_in_map")])]
+            ),
+            _c(
+              "button",
+              {
+                staticClass: "border square round",
+                on: {
+                  click: function ($event) {
+                    return _vm.updateModal("modal left active")
+                  },
+                },
+              },
+              [_c("i", [_vm._v("arrow_backward")])]
+            ),
+            _c(
+              "button",
+              {
+                staticClass: "border square round",
+                on: {
+                  click: function ($event) {
+                    return _vm.updateModal("modal right active")
+                  },
+                },
+              },
+              [_c("i", [_vm._v("arrow_forward")])]
+            ),
+            _c(
+              "button",
+              {
+                staticClass: "border square round",
+                on: {
+                  click: function ($event) {
+                    return _vm.updateModal("modal top active")
+                  },
+                },
+              },
+              [_c("i", [_vm._v("arrow_upward")])]
+            ),
+            _c(
+              "button",
+              {
+                staticClass: "border square round",
+                on: {
+                  click: function ($event) {
+                    return _vm.updateModal("modal bottom active")
+                  },
+                },
+              },
+              [_c("i", [_vm._v("arrow_downward")])]
+            ),
+            _vm._m(244),
+          ]),
+          _c("h3", [_vm._v("Long Form Content")]),
+          _c("p", [
+            _vm._v(
+              'The Reinheitsgebot (German pronunciation: [ˈʁaɪnhaɪtsɡəboːt] (audio speaker iconlisten), literally "purity order") is a series of regulations limiting the ingredients in beer in Germany and the states of the former Holy Roman Empire. The best known version of the law was adopted in Bavaria in 1516 (by William IV), but similar regulations predate the Bavarian order, and modern regulations also significantly differ from the 1516 Bavarian version. Although today, the Reinheitsgebot is mentioned in various texts about the history of beer, historically it was only applied in the duchy of Bavaria and from 1906 in Germany as a whole, and it had little or no impact in other countries or regions.'
+            ),
+          ]),
+          _c("h4", [_vm._v("1516 Bavarian law")]),
+          _c("p", [
+            _vm._v(
+              "The most influential predecessor of the modern Reinheitsgebot was a law first adopted in the duchy of Munich in 1487. After Bavaria was reunited, the Munich law was adopted across the entirety of Bavaria on 23 April 1516.[1] As Germany unified, Bavaria pushed for adoption of this law on a national basis (see Broader adoption)."
+            ),
+          ]),
+          _c("h5", [_vm._v("Ingredients permitted")]),
+          _c("p", [
+            _vm._v(
+              "According to the 1516 Bavarian law, the only ingredients that could be used in the production of beer were water, barley and hops.[2] The text does not mention yeast as an ingredient, although yeast was at the time knowingly used in the brewing process. It is likely that brewers of the time preferred to see yeast as a fixture of the brewing process. Yeast produced in one batch was commonly transferred to a subsequent batch, thus giving yeast a more permanent character in the brewing process. A full understanding of chemical basis of yeast and the fermentation process did not come until much later."
+            ),
+          ]),
+          _c("h5", [_vm._v("Other regulations")]),
+          _c("p", [
+            _vm._v(
+              "The 1516 Bavarian law set the price of beer (depending on the time of year and type of beer), limited the profits made by innkeepers, and made confiscation the penalty for making impure beer."
+            ),
+          ]),
+          _c("h5", [_vm._v("Text")]),
+          _c("p", [
+            _vm._v(
+              "The text (translated) of the 1516 Bavarian law is as follows:"
+            ),
+          ]),
+          _c("blockquote", [
+            _vm._v(
+              'We hereby proclaim and decree, by Authority of our Province, that henceforth in the Duchy of Bavaria, in the country as well as in the cities and marketplaces, the following rules apply to the sale of beer:\nFrom Michaelmas to Georgi, the price for one Mass [1,069ml] or one Kopf [bowl-shaped container for fluids, not quite one Mass], is not to exceed one Pfennig Munich value, and\nFrom Georgi to Michaelmas, the Mass shall not be sold for more than two Pfennig of the same value, the Kopf not more than three Heller [Heller usually equals one-half Pfennig].\nIf this not be adhered to, the punishment stated below shall be administered.\nShould any person brew, or otherwise have, other beer than March beer, it is not to be sold any higher than one Pfennig per Mass.\nFurthermore, we wish to emphasize that in future in all cities, market-towns and in the country, the only ingredients used for the brewing of beer must be Barley, Hops and Water. Whosoever knowingly disregards or transgresses upon this ordinance, shall be punished by the Court authorities\' confiscating such barrels of beer, without fail.\nShould, however, an innkeeper in the country, city or market-towns buy two or three pails of beer (containing 60 Mass) and sell it again to the common peasantry, he alone shall be permitted to charge one Heller more for the Mass or the Kopf, than mentioned above. Furthermore, should there arise a scarcity and subsequent price increase of the barley (also considering that the times of harvest differ, due to location), WE, the Bavarian Duchy, shall have the right to order curtailments for the good of all concerned.\n— Bavarian Reinheitsgebot of 1516 (emphasis added), Eden, Karl J. (1993). "History of German Brewing". Zymurgy. 16 (4).'
+            ),
+          ]),
+          _c("h4", [_vm._v("Purpose, significance, and impact")]),
+          _c("h5", [_vm._v("Purpose")]),
+          _c("p", [
+            _vm._v(
+              "The Bavarian order of 1516 was introduced in part to prevent price competition with bakers for wheat and rye. The restriction of grains to barley was meant to ensure the availability of affordable bread, as wheat and rye were reserved for use by bakers.[3] The rule may have also had a protectionist role, as beers from Northern Germany often contained additives that could not be grown in Bavaria.[4]\nReligious conservatism may have also played a role in adoption of the rule in Bavaria, to suppress the use of plants that were allegedly used in pagan rituals, such as gruit, henbane, belladonna, or wormwood.[5][6]: 410–411  The rule also excluded problematic methods of preserving beer, such as soot, stinging nettle and henbane.[7]"
+            ),
+          ]),
+          _c("h4", [_vm._v("Significance and continuity")]),
+          _c("p", [
+            _vm._v(
+              "While some sources refer to the Bavarian law of 1516 as the first law regulating food safety,[1] this is inaccurate, as earlier food safety regulations can be traced back as far as ancient Rome.[8] Similarly, some sources claim that the law has been essentially unchanged since its adoption, but as early as the mid-1500s Bavaria began to allow ingredients such as coriander, bay leaf, and wheat.[9][10] Yeast was also added to modern versions of the law after the discovery of its role in fermentation.\nThe Reinheitsgebot remains the most famous law that regulates the brewing of beer,[11] and continues to influence brewing not only in Germany, but around the world.[12]"
+            ),
+          ]),
+          _c("h4", [_vm._v("Impact on beer diversity in Germany")]),
+          _c("p", [
+            _vm._v(
+              "Modern versions of the law have contained significant exceptions for different types of beer (such as top-fermented beers), for export beers, and for different regions. The basic law now declares that only malted grains, hops, water and yeast are permitted.[13]\nIn response to the growth of craft breweries globally, some commentators,[6]: 122 [14] German brewers,[15] and even German politicians[16] have argued that the Reinheitsgebot has slowed Germany's adoption of beer trends popular in the rest of the world, such as Belgian lambics and American craft styles. In late 2015, Bavarian brewers voted in favor of a revision to the beer laws to allow other natural ingredients"
+            ),
+          ]),
+        ]),
         _c(
           "div",
           { staticClass: "modal right large", attrs: { id: "modal-samples" } },
           [
             _c("header", { staticClass: "fixed" }, [
-              _vm._m(244),
+              _vm._m(245),
               _c("div", {
                 directives: [
                   {
@@ -14160,15 +14279,15 @@ exports.default = _default;
           ],
           2
         ),
-        _vm._m(245),
+        _vm._m(246),
         _c(
           "div",
           { staticClass: "modal right large", attrs: { id: "modal-icons" } },
           [
             _c("header", { staticClass: "fixed" }, [
               _c("nav", [
-                _vm._m(246),
                 _vm._m(247),
+                _vm._m(248),
                 _c(
                   "a",
                   {
@@ -17297,6 +17416,9 @@ var staticRenderFns = [
       _c("button", { attrs: { "data-ui": "#modal-calendar" } }, [
         _vm._v("Calendar"),
       ]),
+      _c("button", { attrs: { "data-ui": "#modal-long" } }, [
+        _vm._v("Long Modal"),
+      ]),
     ])
   },
   function () {
@@ -19679,6 +19801,16 @@ var staticRenderFns = [
     return _c(
       "button",
       { staticClass: "square round flat", attrs: { "data-ui": "#modal" } },
+      [_c("i", [_vm._v("close")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      { staticClass: "square round flat", attrs: { "data-ui": "#modal-long" } },
       [_c("i", [_vm._v("close")])]
     )
   },
